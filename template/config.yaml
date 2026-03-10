@@ -1,0 +1,40 @@
+# Skills Arsenal Method 配置文件
+
+# 最小评分门槛
+min_score: 3.0
+
+# 自动同步间隔(小时)
+sync_interval: 24
+
+# 备份保留天数
+backup_days: 30
+
+# 扫描排除目录
+exclude_dirs:
+  - node_modules
+  - .git
+  - dist
+  - build
+
+# 黑白名单
+blacklist:
+  - deprecated
+  - unmaintained
+  - abandoned
+
+whitelist:
+  - official
+  - verified
+  - stable
+
+# 定时任务
+cron:
+  sync: "0 3 * * *"
+  quality_check: "0 3 * * 0"
+  backup: "0 4 * * *"
+
+# 通知设置
+notifications:
+  email: ""
+  webhook: ""
+  slack: false
