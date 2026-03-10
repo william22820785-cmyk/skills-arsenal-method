@@ -1,7 +1,7 @@
 ---
 name: skills-arsenal-method
 version: 1.0.0
-description: Skills武器库建设方法论 - 教你自己搭建224+Skills管理系统的完整方案
+description: Skills武器库建设方法论 - 教你自己搭建任意规模Skills管理系统的完整方案
 author: ACE Team
 tags: [skills, library, method, automation, management]
 ---
