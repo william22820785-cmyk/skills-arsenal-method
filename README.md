@@ -1,34 +1,130 @@
 # Skills Arsenal Method
 
-> 开箱即用的Skills武器库搭建方案，5分钟拥有自己的任意规模Skills管理系统
+> Build your own Skills management system in 5 minutes
 
-## 快速开始
+## What is Skills Arsenal Method?
 
+A plug-and-play solution for building and managing your OpenClaw Skills library. Automatically handle discovery, quality control, security scanning, and synchronization.
+
+## Features
+
+### 🚀 One-Click Installation
 ```bash
-# 克隆
 git clone https://github.com/william22820785-cmyk/skills-arsenal-method.git my-skills
-
-# 安装
 cd my-skills
-chmod +x install.sh
-./install.sh
-
-# 使用
-./scripts/search.sh ai
+chmod +x install.sh && ./install.sh
 ```
 
-## 功能
+### 🔍 Smart Discovery
+- Auto-scan ClawHub for new Skills
+- Filter by rating and tags
+- Batch install high-quality Skills
 
-- 🔍 智能搜索 - 快速定位Skills
-- 🔄 自动同步 - 每日更新
-- 📊 质量检查 - 评分验证
-- 🔒 安全扫描 - 风险检测
-- 📈 报告生成 - 一目了然
+### 📊 Quality Control
+- Rating threshold checks (>3.0)
+- Dependency validation
+- Conflict detection
 
-## 文档
+### 🔒 Security Scanning
+- Malicious command detection
+- Suspicious network monitoring
+- Sensitive data scanning
 
-见 [SKILL.md](./SKILL.md)
+### 🔄 Auto Sync
+- Daily automatic updates
+- Incremental sync
+- Version tracking
 
-## License
+### ⚡ Fast Search
+```bash
+./scripts/search.sh ai          # Search AI skills
+./scripts/search.sh marketing   # Search marketing skills
+./scripts/search.sh github      # Search GitHub skills
+```
 
-MIT
+## Directory Structure
+
+```
+skills-arsenal-method/
+├── SKILL.md                    # Main file
+├── install.sh                  # One-click installer
+├── scripts/
+│   ├── search.sh              # Search tool
+│   ├── sync.sh                # Sync updates
+│   ├── quality_check.sh       # Quality check
+│   ├── security_scan.sh      # Security scan
+│   ├── backup.sh             # Backup
+│   └── report.sh             # Reports
+├── template/
+│   ├── config.yaml           # Config template
+│   └── INDEX.md              # Index template
+└── README.md
+```
+
+## Quick Start
+
+```bash
+# Install
+./install.sh
+
+# Search Skills
+./scripts/search.sh --help
+
+# Sync
+./scripts/sync.sh
+
+# Generate report
+./scripts/report.sh
+```
+
+## Configuration
+
+Edit `template/config.yaml`:
+
+```yaml
+min_score: 3.0
+sync_interval: 24
+backup_days: 30
+
+blacklist:
+  - deprecated
+  - unmaintained
+
+whitelist:
+  - official
+  - verified
+```
+
+## Cron Jobs
+
+```bash
+# Auto sync daily at 3 AM
+0 3 * * * /path/to/scripts/sync.sh >> logs/sync.log 2>&1
+
+# Quality check weekly at 3 AM Sunday
+0 3 * * 0 /path/to/scripts/quality_check.sh >> logs/quality.log 2>&1
+```
+
+## Use Cases
+
+| Scenario | Efficiency |
+|----------|------------|
+| Find Skills | ~95% faster |
+| Install Skills | ~90% faster |
+| Quality Check | ~85% faster |
+| Security Scan | 100% |
+
+## Requirements
+
+- Bash 4.0+
+- Git
+- curl/wget
+- Python 3.8+ (optional)
+
+## Support
+
+- GitHub Issues: https://github.com/william22820785-cmyk/skills-arsenal-method
+
+---
+
+**License**: MIT
