@@ -1,6 +1,6 @@
 # Skills Arsenal Method
 
-> 开箱即用的Skills武器库搭建方案，5分钟拥有自己的224+Skills管理系统
+> 开箱即用的Skills武器库搭建方案，5分钟拥有自己的任意规模Skills管理系统
 
 ## 快速开始
 
